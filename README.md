@@ -40,3 +40,5 @@ BRAClic est une plateforme innovante qui digitalise la chaîne de distribution d
 ```bash
 git clone https://github.com/votre-username/braclic-app.git
 cd braclic-app
+cp backend/.env.example backend/.env
+# Remplir les variables d'environnement nécessaires
