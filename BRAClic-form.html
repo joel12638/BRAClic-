@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRAClic - Formulaire de Commande</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #B8860B, #00308F, #8B0000);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background: linear-gradient(135deg, #B8860B, #00308F);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #daa520, #0040a0);
+        }
+        .whatsapp-icon {
+            vertical-align: middle;
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>BRAClic</h1>
+        <p>Une bière, un clic, un revenu</p>
+    </div>
+
+    <form id="braclicForm">
+        <div class="form-group">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" required placeholder="Votre nom complet">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Numéro de téléphone</label>
+            <input type="tel" id="phone" required placeholder="Votre numéro WhatsApp">
+        </div>
+
+        <div class="form-group">
+            <label for="product">Produit souhaité</label>
+            <select id="product" required>
+                <option value="">Sélectionnez un produit</option>
+                <option value="Primus">Primus</option>
+                <option value="Mützig">Mützig</option>
+                <option value="Coca-Cola">Coca-Cola</option>
+                <option value="Sprite">Sprite</option>
+                <option value="Fanta">Fanta</option>
+                <option value="eau">Eau</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="format">Format</label>
+            <select id="format" required>
+                <option value="">Sélectionnez un format</option>
+                <option value="bouteille">Bouteille</option>
+                <option value="caisse">Caisse</option>
+                <option value="fût">Fût</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Quantité</label>
+            <input type="number" id="quantity" min="1" required placeholder="Nombre d'unités">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Adresse de livraison</label>
+            <textarea id="address" rows="3" required placeholder="Votre adresse complète"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message supplémentaire (optionnel)</label>
+            <textarea id="message" rows="2" placeholder="Instructions spéciales ou commentaires"></textarea>
+        </div>
+
+        <button type="submit">
+            <img class="whatsapp-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgaGVpZ2h0PSI0OCIgd2lkdGg9IjQ4Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNNCA0MGw0LTExYy0yLTQtMS04LTMtMTFsMTUtMTNjNSA0IDcgOSA2IDE0bC0yIDhjLTIgNC02IDUtMTAgNGwtMTEtNGgyMHoiLz48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTMgMTBsLTYgNi0zLTJjMi0zIDUtNiA5LTdsLTUgNmMxIDIgMiA1IDIgN2wtMy0xeiIvPjxwYXRoIGZpbGw9IiM2MGE5NTYiIGQ9Ik0yNCA2QTM4IDM4IDAgMCAwIDYgMjRsNCAxMWMxIDIgNCA0IDcgNGgxMWEzOCAzOCAwIDEgMCAwLTc2eiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0yMiAyNGMtMS0xLTQtMS01IDBsLTQgNGMtMSAxLTIgNC0xIDZsLTQgMWMtMSAwLTEtMi0yLTNsNy03YzIgMiA1IDUgNyA3bC0xLTFjLTEtMS0zLTQtMy02bDQtNGMxLTEgMi0zIDEtNHoiLz48L3N2Zz4=" alt="WhatsApp">
+            Envoyer la commande via WhatsApp
+        </button>
+    </form>
+
+    <script>
+        document.getElementById('braclicForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Récupérer les valeurs du formulaire
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const product = document.getElementById('product').value;
+            const format = document.getElementById('format').value;
+            const quantity = document.getElementById('quantity').value;
+            const address = document.getElementById('address').value;
+            const message = document.getElementById('message').value;
+            
+            // Formater le message pour WhatsApp
+            const whatsappMessage = `Nouvelle commande BRAClic%0A%0A*Nom:* ${name}%0A*Téléphone:* ${phone}%0A*Produit:* ${product}%0A*Format:* ${format}%0A*Quantité:* ${quantity}%0A*Adresse:* ${address}%0A*Message:* ${message || 'Aucun'}`;
+            
+            // Ouvrir WhatsApp avec le message pré-rempli
+            window.open(`https://wa.me/243859066929?text=${whatsappMessage}`, '_blank');
+        });
+    </script>
+</body>
+</html>
