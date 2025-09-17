@@ -47,3 +47,8 @@ cd backend && npm install
 cd ../frontend && flutter pub get
 cp backend/.env.example backend/.env
 # Remplir les variables d'environnement nécessaires
+# Backend (port 3000)
+cd backend && npm run dev
+
+# Frontend
+cd frontend && flutter run
