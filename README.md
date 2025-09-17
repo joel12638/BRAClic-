@@ -1,11 +1,11 @@
-# 🍻 BRAClic - Livraison & Réseau Brahma en 1 Clic
+# 🍻 BRAClic - Livraison & Réseau Bralima ma en 1 Clic
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 > Une bière, un clic, un revenu
 
-BRAClic est une plateforme innovante qui digitalise la chaîne de distribution des produits Brahma (Primus, Mützig, Coca, etc.) en permettant aux clients de commander en quelques clics, de localiser les dépôts, d'être livrés rapidement, et de devenir des revendeurs indépendants officiels.
+BRAClic est une plateforme innovante qui digitalise la chaîne de distribution des produits Brahma (Primus, Mützig, Coca-Cola, nkoyi etc.) en permettant aux clients de commander en quelques clics, de localiser les dépôts, d'être livrés rapidement, et de devenir des revendeurs indépendants officiels.
 
 ## ✨ Fonctionnalités Principales
 
@@ -40,5 +40,10 @@ BRAClic est une plateforme innovante qui digitalise la chaîne de distribution d
 ```bash
 git clone https://github.com/votre-username/braclic-app.git
 cd braclic-app
+# Backend
+cd backend && npm install
+
+# Frontend
+cd ../frontend && flutter pub get
 cp backend/.env.example backend/.env
 # Remplir les variables d'environnement nécessaires
