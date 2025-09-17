@@ -1,13 +1,42 @@
+# 🍻 BRAClic - Livraison & Réseau Brahma en 1 Clic
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-1. **En-tête avec badges** pour une apparence professionnelle
-2. **Description concise** du projet et de sa valeur
-3. **Fonctionnalités détaillées** sous forme de liste
-4. **Stack technique** complète
-5. **Instructions d'installation** claires
-6. **Structure du projet** bien organisée
-7. **Documentation API** sommaire
-8. **Guide de contribution** standard
-9. **Informations de contact** complètes
-10. **Section remerciements** et licence
- BRAClic.
+> Une bière, un clic, un revenu
+
+BRAClic est une plateforme innovante qui digitalise la chaîne de distribution des produits Brahma (Primus, Mützig, Coca, etc.) en permettant aux clients de commander en quelques clics, de localiser les dépôts, d'être livrés rapidement, et de devenir des revendeurs indépendants officiels.
+
+## ✨ Fonctionnalités Principales
+
+- **📱 Commande Rapide** - Interface intuitive pour commander vos produits Brahma préférés
+- **🚚 Livraison Intelligente** - Géolocalisation et estimation des délais en temps réel
+- **🏪 Carte Interactive** - Localisation de tous les dépôts Brahma avec informations détaillées
+- **👨‍💼 Espace Revendeur** - Devenez revendeur agréé et suivez vos performances
+- **📊 Dashboard Admin** - Outils de gestion avancés pour BRALIMA
+
+## 🛠️ Technologies Utilisées
+
+- **Frontend:** Flutter (Android + iOS)
+- **Backend:** Node.js avec Express
+- **Base de données:** MongoDB avec Mongoose
+- **Géolocalisation:** MapBox API
+- **Paiements:** Intégrations Vodacom, Orange, Airtel Money
+- **Hébergement:** Firebase Hosting & Functions
+- **Notifications:** WhatsApp Business API, SMS
+
+## 🚀 Installation et Déploiement
+
+### Prérequis
+
+- Node.js 16+ et npm
+- Flutter SDK 3.0+
+- Compte Firebase
+- Compte MapBox
+
+### Installation
+
+1. Cloner le repository:
+```bash
+git clone https://github.com/votre-username/braclic-app.git
+cd braclic-app
