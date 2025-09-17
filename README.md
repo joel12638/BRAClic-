@@ -52,3 +52,19 @@ cd backend && npm run dev
 
 # Frontend
 cd frontend && flutter run
+braclic-app/
+├── backend/                 # API Node.js
+│   ├── controllers/         # Contrôleurs des routes
+│   ├── models/             # Modèles de données MongoDB
+│   ├── routes/             # Définition des routes API
+│   ├── middleware/         # Middlewares d'authentification
+│   └── config/             # Configuration base de données
+├── frontend/               # Application Flutter
+│   ├── lib/
+│   │   ├── models/         # Modelles de données app
+│   │   ├── services/       # Services API
+│   │   ├── widgets/        # Composants UI réutilisables
+│   │   └── screens/        # Écrans de l'application
+│   └── assets/             # Images, polices, etc.
+├── docs/                   # Documentation supplémentaire
+└── README.md               # Ce fichier
